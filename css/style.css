@@ -279,7 +279,20 @@ body {
 /* Açıldığında konumlanma sorunu için JavaScript veya özel bir CSS çözümü gerekebilir */
 /* Ancak genel olarak, select elementinin açılan menüsü tarayıcı tarafından kontrol edilir. */
 /* Daha iyi kontrol için özel bir dropdown menü yapısı oluşturmak gerekir. */
-/* Yine de, .language-selector'a 'position: relative;' vererek ve '.navbar-nav'a 'position: static;' veya 'relative' vererek bazen yardımcı olabiliriz. */
+.language-selector {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.language-selector:hover {
+  background-color: #f1f1f1;
+}
 
 /* Mobil Görünüm Düzenlemeleri */
 @media (max-width: 991.98px) {

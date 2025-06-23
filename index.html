@@ -1,178 +1,920 @@
 <!DOCTYPE html>
 <html lang="sq">
-  <head>
-    <title>Proper Pizza</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="images/images (1).png">
+<head>
+  <title>Proper Pizza</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="images/images (1).png">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .language-selector {
+      margin-left: 15px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      background-color: #f8f9fa;
+      color: #333;
+      cursor: pointer;
+    }
+    .translatable {
+      transition: all 0.3s ease;
+    }
+    .pizza-topping {
+      transition: transform 0.3s ease;
+    }
+    .pizza-topping:hover {
+      transform: translateY(-10px);
+    }
+    .rotate-pizza {
+      animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a href="/" class="logo-link">
+        <img src="images/images__1_-removebg-preview.png" 
+             alt="Logoja e Faqes Kryesore" 
+             width="120" 
+             height="auto" 
+             class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> <span class="translatable" data-key="menu">Menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav" style="visibility:visible!important">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link translatable" data-key="home">Kryefaqja</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link translatable" data-key="about">Rreth Nesh</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link translatable" data-key="contact">Kontakt</a></li>
+          <li class="nav-item">
+            <select class="language-selector" id="languageSelector">
+              <option value="sq">Shqip</option>
+              <option value="en">English</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .language-selector {
-        margin-left: 15px;
-        padding: 5px 10px;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-        background-color: #f8f9fa;
-        color: #333;
-        cursor: pointer;
-      }
-      .translatable {
-        transition: all 0.3s ease;
-      }
-    </style>
-  </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-			<a href="/" class="logo-link">
-				<img 
-					src="images/images__1_-removebg-preview.png" 
-					alt="Logoja e Faqes Kryesore" 
-					width="120" 
-					height="auto" 
-					class="logo"
-				>
-			</a>
-		      <a class="navbar-brand" href="index.html"><span class=""></span><br><small></small></a>
-		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-		        <span class="oi oi-menu"></span> Menu
-		      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav" style="visibility:visible!important">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link translatable" data-key="home">Kryefaqja</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link translatable" data-key="about">Rreth Nesh</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link translatable" data-key="contact">Kontakt</a></li>
-              <li class="nav-item">
-                <select class="language-selector" id="languageSelector">
-                  <option value="sq">Shqip</option>
-                  <option value="en">English</option>
-                </select>
-              </li>
-	        </ul>
-	      </div>
-		  </div>
-	  </nav>
-
-    <section class="home-slider owl-carousel img" style="background-image: url('images/bg_1.jpg');">
-		<div class="slider-item">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text align-items-center" data-scrollax-parent="true">
-					<div class="col-md-6 col-sm-12 ftco-animate">
-						<span class="subheading translatable" data-key="delicious">Delicious</span>
-						<h1 class="mb-4 translatable" data-key="pershuto_pizza">Pershuto Pizza</h1>
-						<p class="mb-4 mb-md-5 translatable" data-key="pershuto_desc">
-							A delicious combo of creamy white sauce and tender chicken. Perfectly baked with a crispy crust, this pizza offers a rich yet light flavor in every bite!
-						</p>
-						<p>
-							<a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a>
-							<a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
-						</p>
-					</div>
-					<div class="col-md-6 ftco-animate">
-						<img src="images/Pershuto-1024x1024.png" class="img-fluid" alt="Pershuto Pizza">
-					</div>
-				</div>
-			</div>
-		</div>
-
-      <div class="slider-item" class="containerr">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center" data-scrollax-parent="true">
-            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-            	<span class="subheading translatable" data-key="crunchy">Crunchy</span>
-              <h1 class="mb-4 translatable" data-key="patata_pizza">La Patata Loca Pizza</h1>
-              <p class="mb-4 mb-md-5 translatable" data-key="patata_desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a></p>
-            </div>
-            <div class="col-md-5 ftco-animate">
-            	<img src="images/3AA00141.png" class="img-fluid" alt="La Patata Loca Pizza" style="width: 95%;">
-            </div>
+  <section class="home-slider owl-carousel img" style="background-image: url('images/bg_1.jpg');">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+          <div class="col-md-6 col-sm-12 ftco-animate">
+            <span class="subheading translatable" data-key="delicious">Delicious</span>
+            <h1 class="mb-4 translatable" data-key="pershuto_pizza">Pershuto Pizza</h1>
+            <p class="mb-4 mb-md-5 translatable" data-key="pershuto_desc">
+              Një kombinim i shijshëm i salcës së bardhë kremoze dhe pule të butë. Pjekur në mënyrë të përkryer me një crust të krokant, kjo pizza ofron një shije të pasur por të lehtë në çdo kafshatë!
+            </p>
+            <p>
+              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a>
+              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+            </p>
+          </div>
+          <div class="col-md-6 ftco-animate">
+            <img src="images/Pershuto-1024x1024.png" class="img-fluid pizza-topping" alt="Pershuto Pizza">
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="slider-item" class="containerr" style="background-image: url(images/inside.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<span class="subheading translatable" data-key="welcome">Welcome</span>
-              <h1 class="mb-4 translatable" data-key="welcome_title">We cooked your desired Pizza Recipe</h1>
-              <p class="mb-4 mb-md-5 translatable" data-key="welcome_desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a></p>
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+          <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
+            <span class="subheading translatable" data-key="crunchy">Crunchy</span>
+            <h1 class="mb-4 translatable" data-key="patata_pizza">La Patata Loca Pizza</h1>
+            <p class="mb-4 mb-md-5 translatable" data-key="patata_desc">Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.</p>
+            <p>
+              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> 
+              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+            </p>
+          </div>
+          <div class="col-md-5 ftco-animate">
+            <img src="images/3AA00141.png" class="img-fluid pizza-topping" alt="La Patata Loca Pizza" style="width: 95%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-item" style="background-image: url(images/inside.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+          <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            <span class="subheading translatable" data-key="welcome">Mirësevini</span>
+            <h1 class="mb-4 translatable" data-key="welcome_title">Ne gatuajmë recetën tuaj të preferuar të pizzës</h1>
+            <p class="mb-4 mb-md-5 translatable" data-key="welcome_desc">Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.</p>
+            <p>
+              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> 
+              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-intro">
+    <div class="container-wrap">
+      <div class="wrap d-md-flex">
+        <div class="info">
+          <div class="row no-gutters">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-phone"></span></div>
+              <div class="text">
+                <h3>+383 49 803 090</h3>
+                <p class="translatable" data-key="phone_desc">Një lumë i vogël i quajtur Duden</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-my_location"></span></div>
+              <div class="text">
+                <h3 class="translatable" data-key="location">Kosovë/Prizren</h3>
+                <p>Tranzit Rr.Enver Hadri</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-clock-o"></span></div>
+              <div class="text">
+                <h3 class="translatable" data-key="opening_hours">E Hënë-E Diel</h3>
+                <p>10:00am - 2:00pm</p>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="social d-md-flex pl-md-5 p-4 align-items-center">
+          <ul class="social-icon">
+            <li class="ftco-animate"><a href="https://www.facebook.com/properpizzaofficial"><span class=""></span> <img src="images/5305154_fb_facebook_facebook logo_icon.png" alt="" style="width: 25px;"></a></li>
+            <li class="ftco-animate"><a href="https://www.instagram.com/properpizzaprizren/"><span class=""></span><img src="images/5279112_camera_instagram_social media_instagram logo_icon.png" alt="" style="width: 25px;"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section" id="menuu" class="menuu">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <h2 class="mb-4 translatable" data-key="popular_pizzas">Pizzat Popullore</h2>
+          <p class="translatable" data-key="popular_desc">Larg larg, prapa maleve të fjalës, larg nga vendet Vokalia dhe Consonantia, jetojnë tekstet e verbër.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-wrap">
+      <div class="row no-gutters d-flex">
+        <div class="col-lg-4 d-flex ftco-animate">
+          <div class="services-wrap d-flex">
+            <a href="#" class="img" style="background-image: url(images/pica-proper.png); width: 45%; height: 90%;"></a>
+            <div class="text p-4">
+              <h3 class="translatable" data-key="proper_pizza">Proper Pizza</h3>
+              <p class="translatable" data-key="proper_desc">Salcë Proper Sampinjona Djath Proper Proshuto Suxhuk Farë susami</p>
+              <p class="price"><span>3.00€-19.50€</span></p>
+            </div>
+          </div>
+        </div>
+        <!-- Continue with all pizza items adding translation support -->
+        <!-- Example for one more pizza -->
+        <div class="col-lg-4 d-flex ftco-animate">
+          <div class="services-wrap d-flex">
+            <a href="#" class="img" style="background-image: url(images/pica-loca.png); width: 41.5%;"></a>
+            <div class="text p-4">
+              <h3 class="translatable" data-key="loca_pizza">Loca Pizza</h3>
+              <p class="translatable" data-key="loca_desc">Salcë Proper Djath Proper Suxhuk Salcë Loca Farë susami</p>
+              <p class="price"><span>3.50€-22.00€</span></p>
+            </div>
+          </div>
+        </div>
+<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="#" class="img" style="background-image: url(images/4-djathrat-.png); width: 45%;"></a>
+    					<div class="text p-4">
+    						<h3>4 Djathrat Pizza</h3>
+    						<p>4 Cheeses Sauce Parmezan Proper Cheese Mozzarella Gorgonzola Sesame Seeds
+							</p>
+							<p class="price"><span>30cm/9.00€-24.00€</span> <a href="#"></a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="#" class="img order-lg-last" style="background-image: url(images/pica-bbq.png); width: 41%; height: 80%;"></a>
+    					<div class="text p-4">
+    						<h3>Barbeque Chicken Pizza</h3>
+    						<p>Proper Sauce Proper Cheese Chicken Meatballs Barbeque Sauce Sesame Seeds</p>
+							<p class="price"><span>3.50€-21.00€</span> <a href="#"></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="#" class="img order-lg-last" style="background-image: url(images/pica-vegetariane.png); width: 40%; height: 72%;"></a>
+    					<div class="text p-4">
+    						<h3>Vegetarian Pizza</h3>
+    						<p>Proper Sauce Courgettes Proper Cheese Eggplant Fresh Mushrooms Peppers Carmelized Onions Sesame Seeds	</p>
+							<p class="price"><span>3.00€-19.50€</span> <a href="#"></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="#" class="img order-lg-last" style="background-image: url(images/Patata-Macho-copy-300x300.png); width: 43%; height: 80%;"></a>
+    					<div class="text p-4">
+    						<h3>Patata Macho Pizza</h3>
+    						<p>Proper Sauce Proper Cheese Chicken Cubes Potatoes  Macho Sauce Sesame Seeds</p>
+							<p class="price"><span>30cm/8.50€-23.00€</span> <a href="#"></a></p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>      
+	</div>
+    </div>
+
+    <div id="middle" class="container">
+      <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h2 class="mb-4 translatable" data-key="our_menu">Menuja Jonë</h2>
+          <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+          <p class="mt-5 translatable" data-key="menu_desc">Çdo fetë mishi që zbukuron një Proper Pizza zgjidhet për cilësinë, shijen dhe integritetin e saj.</p>
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-margarita.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Margarita Pizza</span></h3>
+	        				<span class="price">3.00€-18.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper sauce Proper Cheese Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+        			</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-fungi.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Fungi Pizza</span></h3>
+	        				<span class="price">3.00€-19.50€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Proper Cheese Mushrooms Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-vegetariane.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Vegetarian Pizza</span></h3>
+	        				<span class="price">3.00€-19.50€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Courgettes Proper Cheese Eggplant Fresh Mushrooms Peppers Carmelized Onions Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-proper.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Proper Pizza </span></h3>
+	        				<span class="price">3.00€-19.50€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Mushrooms Proper Cheese Prosciutto Suxhuk Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-peperoni.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Pepperoni Pizza </span></h3>
+	        				<span class="price">3.50€-21.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Proper Cheese Suxhuk Mushrooms Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-pershuto.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Proshuto Pizza </span></h3>
+	        				<span class="price">3.00€-19.50€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Proper Cheese Prosciutto Mushrooms Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-tuna.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Tuna Pizza</span></h3>
+	        				<span class="price">3.50€-21.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Tuna  Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-oriental.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Oriental Pizza</span></h3>
+	        				<span class="price">3.50€-22.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Suxhuk Egg Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex  ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-bbq.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>BBQ Chicken Pizza</span></h3>
+	        				<span class="price">3.50€-21.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Chicken Meatballs Barbeque Sauce Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica-loca.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>Loca Pizza</span></h3>
+	        				<span class="price">3.50€-22.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Suxhuk Loca Sauce Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/pica\ macho.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> Macho Pizza</span></h3>
+	        				<span class="price">3.50€-21.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>Proper Sauce Proper Cheese Chicken Meatballs Macho Sauce Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/4-djathrat-.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> 4 Djathrat Pizza</span></h3>
+	        				<span class="price">9.00€-24.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>4 Cheeses Sauce Parmezan Proper Cheese Mozzarella Gorgonzola Sesame Seeds/30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/la_patata.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> La Patata  Pizza</span></h3>
+	        				<span class="price">8.00€-22.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Chicken Cubes Potatoes Sesame Seeds/30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/la_patata_loca.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> La Patata Loca & Macho & BBQ Pizza</span></h3>
+	        				<span class="price">8.50€-23.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Chicken Cubes Potatoes Sauce Sesame Seeds/20-30-40-60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+
+        	<div class="col-md-6">
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/Screenshot_2025-01-07_at_3.45.59_PM-removebg-preview.png);"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span> 4 Stinet Pizza</span></h3>
+	        				<span class="price">24.00€</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p> Proper Sauce Proper Cheese Chicken Cubes Potatoes Loca Sauce Sesame Seeds/60cm</p>
+	        			</div>
+	        		</div>
+        		</div>
+			</div>
+
+				
+        	</div>
+        </div>
+    	</div>
+    </section>
+	<section class="ftco-about d-md-flex">
+		<div class="one-half img" style="background-image: url(images/349463847_1275376076404291_5231252535352285544_n.jpg) ;"></div>
+		<div class="one-half ftco-animate">
+		<div class="heading-section ftco-animate ">
+		  <h2 class="mb-4">Welcome to <span class=>Proper Pizza</span> Restaurant</h2>
+		</div>
+		<div>
+				  <p>Proper Pizza, founded in 2002, has evolved into a global pizza enterprise renowned for its commitment to quality and flavor. Since selling our first franchise in 2008, we’ve been on a mission to redefine the pizza industry and expand our presence worldwide.</p>
+			  </div>
+		</div>
+	</section>
+	<section class="ftco-section ftco-services">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+		  <div class="col-md-7 heading-section ftco-animate text-center">
+			<h2 class="mb-4">Our Services</h2>
+			<p>Our mission is to redefine pizza enjoyment through consistency, innovation, and a commitment to flavor excellence, ensuring every bite is distinctive and delightful. Join us on a thrilling journey of culinary adventure.</p>
+		  </div>
+		</div>
+			<div class="row">
+		  <div class="col-md-4 ftco-animate">
+			<div class="media d-block text-center block-6 services">
+			  <div class="icon d-flex justify-content-center align-items-center mb-5">
+				  <span class="flaticon-diet"></span>
+			  </div>
+			  <div class="media-body">
+				<h3 class="heading">Healthy Foods</h3>
+				<p>"Discover a variety of wholesome and nutritious options that cater to your health-conscious cravings. From fresh ingredients to balanced meals, our healthy foods are designed to nourish both body and mind."</p>
+			  </div>
+			</div>      
+		  </div>
+		  <div class="col-md-4 ftco-animate">
+			<div class="media d-block text-center block-6 services">
+			  <div class="icon d-flex justify-content-center align-items-center mb-5">
+				  <span class="flaticon-bicycle"></span>
+			  </div>
+			  <div class="media-body">
+				<h3 class="heading">Fastest Delivery</h3>
+				<p>"Enjoy your favorite meals delivered quickly and efficiently. With our lightning-fast delivery service, your order arrives fresh and on time, every time."</p>
+			  </div>
+			</div>      
+		  </div>
+		  <div class="col-md-4 ftco-animate">
+			<div class="media d-block text-center block-6 services">
+			  <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
+			  <div class="media-body">
+				<h3 class="heading">Original Recipes</h3>
+				<p>"Indulge in unique, handcrafted recipes that you won’t find anywhere else. Our original creations are made with passion, delivering bold flavors and an unforgettable taste experience."</p>
+			  </div>
+			</div>    
+		  </div>
+		</div>
+		</div>
+	</section>
+
+    <section class="ftco-gallery">
+    	<div class="container-wrap">
+    		<div class="row no-gutters">
+					<div class="col-md-3 ftco-animate">
+						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/bgg2.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/bgg3.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/bgg4.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/bgg5.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+        </div>
+    	</div>
+    </section>
+
+
+		<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/inside.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+        	<div class="col-md-10">
+        		<div class="row">
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-pizza-1"></span></div>
+		              	<strong class="number" data-number="3">0</strong>
+		              	<span>Pizza Branches</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-medal"></span></div>
+		              	<strong class="number" data-number="6">0</strong>
+		              	<span>Number of Awards</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-laugh"></span></div>
+		              	<strong class="number" data-number="200000">0</strong>
+		              	<span>Happy Customer</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-chef"></span></div>
+		              	<strong class="number" data-number="30">0</strong>
+		              	<span>Staff</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
         </div>
       </div>
     </section>
 
-    <!-- Rest of your HTML content with translatable elements... -->
-    <!-- Make sure to add data-key attributes to all elements that need translation -->
+    
+		 <title>
+		  Explore Exquisite Flavors
+		 </title>
+		 <script src="https://cdn.tailwindcss.com">
+		 </script>
+		</head>
+		<body class="bg-white ">
+		 <div class="container mx-auto px-4 py-8">
+		  <div class="text-center">
+		   <h2 class="text-sm text-orange-600 uppercase">
+			Proper Pizza
+		   </h2>
+		   <h1 class="text-3xl font-bold mt-2">
+			Explore Exquisite Flavors
+		   </h1>
+		  </div>
+		  <div class="flex flex-col md:flex-row items-center justify-center mt-8">
+		   <div class="w-full md:w-1/3 text-center md:text-left">
+			<h3 class="text-xl font-bold">
+				Ingredients
+			</h3>
+			<ul class="mt-4 space-y-4">
+			 <li class="border-t border-gray-300 pt-4">
+			  Rice Flour
+			 </li>
+			 <li class="border-t border-gray-300 pt-4">
+			  Tapioca Flour
+			 </li>
+			</ul>
+		   </div>
+		   <div class="w-full md:w-1/3 flex justify-center my-8 md:my-0">
+			<img alt="A delicious pizza with various toppings" class="rounded-full rotate-pizza" height="400" src="images/Pershuto-1024x1024.png" width="400"/>
+		
+		</div>
+		   <div class="w-full md:w-1/3 text-center md:text-right">
+			<h3 class="text-xl font-bold">
+			 Benefits
+			</h3>
+			<ul class="mt-4 space-y-4">
+			 <li class="border-t border-gray-300 pt-4">
+			  Improved Digestion
+			 </li>
+			 <li class="border-t border-gray-300 pt-4">
+			  Reduced Bloating
+			 </li>
+			</ul>
+		   </div>
+		  </div>
+		 </div>
+		</body>
+	   
+   
+		
+		
 
-    <!-- Your existing scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>Proper Pizza, founded in 2002, has evolved into a global pizza enterprise renowned for its commitment to quality and flavor. Since selling our first franchise in 2008, we’ve been on a mission to redefine the pizza industry and expand our presence worldwide.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.facebook.com/properpizzaofficial"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/properpizzaprizren/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/Pershuto-1024x1024.png); background-size: 90%; "></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">"The flavor balance is amazing – everything from the sauce to the cheese and toppings is spot on!"</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2024</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Berat</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/3AA00127.png);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">"I love how every bite is so flavorful and satisfying – you can really tell it's made with quality ingredients."</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> June 21, 2023</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Arbëresha</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Prizren/ Tranzit Rr.Enver Hadri</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+383 49 803 090</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">properpizzaprizren@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+		<div data-aos="fade-up" class="map-container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23639.137474662257!2d20.684926674316394!3d42.21674890000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353950071f53441%3A0x9a2e660603744a49!2sProper%20Pizza!5e0!3m2!1str!2s!4v1736697233354!5m2!1str!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23639.137474662257!2d20.684926674316394!3d42.21674890000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353950071f53441%3A0x9a2e660603744a49!2sProper%20Pizza!5e0!3m2!1str!2s!4v1736697233354!5m2!1str!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189009.5102271784!2d20.40285587310793!3d42.251329500990195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353bf000d78760d%3A0x8862fa200afb99ea!2sProper%20Pizza!5e0!3m2!1str!2s!4v1736763511019!5m2!1str!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11820.365846284134!2d20.724166397057335!3d42.21248981439132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13539500289711ad%3A0x129b193044b3e412!2sProper%20Pizza!5e0!3m2!1str!2s!4v1750593580327!5m2!1str!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		
+        <div class="row">
+          <div class="col-md-12 text-center">
+<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </i> by <a href= target="_blank">Proper Pizza</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
-    <!-- Language Support Script -->
-    <script src="js/language.js"></script>
-    
-    <script>
-      // Initialize with Albanian language
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelector = document.getElementById('languageSelector');
-        if(localStorage.getItem('preferredLanguage') === 'en') {
-          languageSelector.value = 'en';
-          changeLanguage('en');
-        }
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Continue with other sections adding translation support -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Language Support Script -->
+  <script>
+    // Language translations
+    const translations = {
+      sq: {
+        // Navigation
+        "menu": "Menu",
+        "home": "Kryefaqja",
+        "about": "Rreth Nesh",
+        "contact": "Kontakt",
         
-        languageSelector.addEventListener('change', function() {
-          const lang = this.value;
-          localStorage.setItem('preferredLanguage', lang);
-          changeLanguage(lang);
-        });
+        // Slider
+        "delicious": "Delicious",
+        "pershuto_pizza": "Pershuto Pizza",
+        "pershuto_desc": "Një kombinim i shijshëm i salcës së bardhë kremoze dhe pule të butë. Pjekur në mënyrë të përkryer me një crust të krokant, kjo pizza ofron një shije të pasur por të lehtë në çdo kafshatë!",
+        "order_now": "Porosit Tani",
+        "view_menu": "Shiko Menunë",
+        "crunchy": "Crunchy",
+        "patata_pizza": "La Patata Loca Pizza",
+        "patata_desc": "Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.",
+        "welcome": "Mirësevini",
+        "welcome_title": "Ne gatuajmë recetën tuaj të preferuar të pizzës",
+        "welcome_desc": "Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.",
+        
+        // Contact Info
+        "phone_desc": "Një lumë i vogël i quajtur Duden",
+        "location": "Kosovë/Prizren",
+        "opening_hours": "E Hënë-E Diel",
+        
+        // Menu Section
+        "popular_pizzas": "Pizzat Popullore",
+        "popular_desc": "Larg larg, prapa maleve të fjalës, larg nga vendet Vokalia dhe Consonantia, jetojnë tekstet e verbër.",
+        "our_menu": "Menuja Jonë",
+        "menu_desc": "Çdo fetë mishi që zbukuron një Proper Pizza zgjidhet për cilësinë, shijen dhe integritetin e saj.",
+        "proper_pizza": "Proper Pizza",
+        "proper_desc": "Salcë Proper Sampinjona Djath Proper Proshuto Suxhuk Farë susami",
+        "loca_pizza": "Loca Pizza",
+        "loca_desc": "Salcë Proper Djath Proper Suxhuk Salcë Loca Farë susami",
+        
+        // Add more translations as needed...
+      },
+      en: {
+        // Navigation
+        "menu": "Menu",
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        
+        // Slider
+        "delicious": "Delicious",
+        "pershuto_pizza": "Pershuto Pizza",
+        "pershuto_desc": "A delicious combo of creamy white sauce and tender chicken. Perfectly baked with a crispy crust, this pizza offers a rich yet light flavor in every bite!",
+        "order_now": "Order Now",
+        "view_menu": "View Menu",
+        "crunchy": "Crunchy",
+        "patata_pizza": "La Patata Loca Pizza",
+        "patata_desc": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "welcome": "Welcome",
+        "welcome_title": "We cooked your desired Pizza Recipe",
+        "welcome_desc": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        
+        // Contact Info
+        "phone_desc": "A small river named Duden",
+        "location": "Kosovo/Prizren",
+        "opening_hours": "Monday-Sunday",
+        
+        // Menu Section
+        "popular_pizzas": "Popular Pizzas",
+        "popular_desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+        "our_menu": "Our Menu",
+        "menu_desc": "Every slice of meat that graces a Proper Pizza is selected for its quality flavour and integrity.",
+        "proper_pizza": "Proper Pizza",
+        "proper_desc": "Proper Sauce Mushrooms Proper Cheese Prosciutto Suxhuk Sesame Seeds",
+        "loca_pizza": "Loca Pizza",
+        "loca_desc": "Proper Sauce Proper Cheese Suxhuk Loca Sauce Sesame Seeds",
+        
+        // Add more translations as needed...
+      }
+    };
+
+    function changeLanguage(lang) {
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+      
+      // Get all elements with data-key attribute
+      const translatableElements = document.querySelectorAll('[data-key]');
+      
+      // Update each element's text
+      translatableElements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
       });
       
-      function scrollToMenu() {
-        document.getElementById('menuu').scrollIntoView({ behavior: 'smooth' });
+      // Update the language selector
+      document.getElementById('languageSelector').value = lang;
+      
+      // Save preference to localStorage
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Initialize with Albanian language
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageSelector = document.getElementById('languageSelector');
+      if(localStorage.getItem('preferredLanguage') === 'en') {
+        languageSelector.value = 'en';
+        changeLanguage('en');
       }
-    </script>
-  </body>
+      
+      languageSelector.addEventListener('change', function() {
+        const lang = this.value;
+        localStorage.setItem('preferredLanguage', lang);
+        changeLanguage(lang);
+      });
+    });
+    
+    function scrollToMenu() {
+      document.getElementById('menuu').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
 </html>
