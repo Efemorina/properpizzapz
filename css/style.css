@@ -293,7 +293,20 @@ body {
 .language-selector:hover {
   background-color: #f1f1f1;
 }
-
+  .img-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .price-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .price-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
 /* Mobil Görünüm Düzenlemeleri */
 @media (max-width: 991.98px) {
   .language-selector {
