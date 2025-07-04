@@ -22,8 +22,76 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
+    /* Pizza isimleri için yeni stil */
+    .services-wrap .text h3,
+    .img-container h3 {
+        color: white !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Arka planı daha koyu yaparak yazıların okunaklılığını artırma */
+    .services-wrap .text {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 15px;
+    }
+    
+    /* Fiyat butonları için stil */
+    .price-btn {
+        background-color: #ff6b3d;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .price-btn:hover {
+        background-color: #e05a2c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Pizza açıklamaları için stil */
+    .services-wrap .text p {
+        color: #e0e0e0 !important;
+        font-size: 14px;
+    }
+    
+    /* Popüler pizzalar bölümü arka planı */
+    .ftco-section {
+        background-color: #1a1a1a;
+        padding: 50px 0;
+    }
+    
+    /* Başlık stili */
+    .heading-section h2 {
+        color: white !important;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .heading-section h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #ff6b3d;
+    }
+    
+    .heading-section p {
+        color: #b3b3b3 !important;
+    }
     .language-selector {
       margin-left: 15px;
       padding: 5px 10px;
@@ -45,6 +113,53 @@
     .rotate-pizza {
       animation: rotate 20s linear infinite;
     }
+    
+    /* Yeni eklenen stil düzenlemeleri */
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    .icon-phone {
+      color: white !important;
+      font-size: 1.1rem;
+    }
+    
+    .navbar .icon {
+      color: white !important;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar .icon span {
+      margin-right: 8px;
+    }
+    
+    .navbar .text h3 {
+      color: white !important;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    
+    .img-container h3 {
+      color: #333 !important;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    
+    .price-btn {
+      background-color: #ff6b3d;
+      border-color: #ff6b3d;
+    }
+    
+    .price-btn:hover {
+      background-color: #e05a2c;
+      border-color: #e05a2c;
+    }
+    
     @keyframes rotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
@@ -97,8 +212,7 @@
               Një kombinim i shijshëm i salcës së bardhë kremoze dhe pule të butë. Pjekur në mënyrë të përkryer me një crust të krokant, kjo pizza ofron një shije të pasur por të lehtë në çdo kafshatë!
             </p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a>
-              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
             </p>
           </div>
           <div class="col-md-6 ftco-animate">
@@ -117,8 +231,8 @@
             <h1 class="mb-4 translatable" data-key="patata_pizza">La Patata Loca Pizza</h1>
             <p class="mb-4 mb-md-5 translatable" data-key="patata_desc">Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.</p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> 
-              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+                           <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+
             </p>
           </div>
           <div class="col-md-5 ftco-animate">
@@ -137,8 +251,8 @@
             <h1 class="mb-4 translatable" data-key="welcome_title">Ne gatuajmë recetën tuaj të preferuar të pizzës</h1>
             <p class="mb-4 mb-md-5 translatable" data-key="welcome_desc">Një lumë i vogël i quajtur Duden rrjedh pranë vendit të tyre dhe u siguron atyre gjërat e nevojshme.</p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="order_now">Porosit Tani</a> 
-              <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+                           <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3 translatable" data-key="view_menu">Shiko Menunë</a>
+
             </p>
           </div>
         </div>
@@ -258,102 +372,410 @@
 	</div>
     </div>
 
-    <div id="middle" class="container">
-  <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
-    <div class="col-md-7 heading-section text-center ftco-animate">
-      <h2 class="mb-4 translatable" data-key="our_menu">Menuja Jonë</h2>
-      <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-      <p class="mt-5 translatable" data-key="menu_desc">Çdo fetë mishi që zbukuron një Proper Pizza zgjidhet për cilësinë, shijen dhe integritetin e saj.</p>
-    </div>
-  </div>
-  <div class="row">
+   <div class="row">
+    <!-- Margarita Pizza -->
     <div class="col-md-6 text-center mb-5">
       <h3 class="translatable" data-key="margarita_pizza">Margarita Pizza</h3>
       <div class="img-container" style="background-image: url(images/pica-margarita.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
-      <h3 class="translatable" data-key="margarita_pizza">Margarita Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#margaritaModal">Price</button>
     </div>
 
+    <!-- Fungi Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-fungi.png); height: 270px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="fungi_pizza">Fungi Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#fungiModal">Price</button>
     </div>
 
+    <!-- Vegetarian Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-vegetariane.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="vegetarian_pizza">Vegetarian Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#vegetarianModal">Price</button>
     </div>
 
+    <!-- Proper Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-proper.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="proper_pizza">Proper Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#properModal">Price</button>
     </div>
 
+    <!-- Pepperoni Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-peperoni.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="pepperoni_pizza">Pepperoni Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#pepperoniModal">Price</button>
     </div>
 
+    <!-- Proshuto Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-pershuto.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="proshuto_pizza">Proshuto Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#proshutoModal">Price</button>
     </div>
 
-    <!-- Continue with all other pizzas in the same structure -->
+    <!-- Tuna Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-tuna.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="tuna_pizza">Tuna Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#tunaModal">Price</button>
     </div>
 
+    <!-- Oriental Pizza -->
     <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-oriental.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="oriental_pizza">Oriental Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#orientalModal">Price</button>
     </div>
- <div class="col-md-6 text-center mb-5">
+
+    <!-- BBQ Chicken Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/BBQ.png); height: 310px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="chicken_pizza">BBQ Chicken Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#bbqModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- Loca Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica-loca.png); height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="loca_pizza">Loca Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#locaModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- Macho Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/pica\ macho.png); height: 270px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="macho_pizza">Macho Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#machoModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- 4 Djathrat Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/4-djathrat-.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="4djathrat_pizza">4 Djathrat Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#djathratModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- La Patata Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/la_patata.png); height: 350px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
-      <h3 class="translatable" data-key="la_patata_pizza">La Patata  Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <h3 class="translatable" data-key="la_patata_pizza">La Patata Pizza</h3>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#patataModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- La Patata Loca & Macho & BBQ Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/la_patata_loca.png); height: 350px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="la_loca_macho_bbq_pizza">La Patata Loca & Macho & BBQ Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#locaMachoBbqModal">Price</button>
     </div>
-	 <div class="col-md-6 text-center mb-5">
+
+    <!-- 4 Stinet Pizza -->
+    <div class="col-md-6 text-center mb-5">
       <div class="img-container" style="background-image: url(images/Screenshot_2025-01-07_at_3.45.59_PM-removebg-preview.png); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
       <h3 class="translatable" data-key="4_stinet">4 Stinet Pizza</h3>
-      <button class="btn btn-primary mt-2 price-btn">Price</button>
+      <button class="btn btn-primary mt-2 price-btn" data-bs-toggle="modal" data-bs-target="#stinetModal">Price</button>
+    </div>
+</div>
+
+<!-- Tüm Modal Pencereleri -->
+<!-- Margarita Modal -->
+<div class="modal fade" id="margaritaModal" tabindex="-1" aria-labelledby="margaritaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="margaritaModalLabel">Margarita Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
-				
+
+<!-- Fungi Modal -->
+<div class="modal fade" id="fungiModal" tabindex="-1" aria-labelledby="fungiModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fungiModalLabel">Fungi Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Vegetarian Modal -->
+<div class="modal fade" id="vegetarianModal" tabindex="-1" aria-labelledby="vegetarianModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="vegetarianModalLabel">Vegetarian Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Proper Modal -->
+<div class="modal fade" id="properModal" tabindex="-1" aria-labelledby="properModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="properModalLabel">Proper Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pepperoni Modal -->
+<div class="modal fade" id="pepperoniModal" tabindex="-1" aria-labelledby="pepperoniModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pepperoniModalLabel">Pepperoni Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Proshuto Modal -->
+<div class="modal fade" id="proshutoModal" tabindex="-1" aria-labelledby="proshutoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="proshutoModalLabel">Proshuto Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tuna Modal -->
+<div class="modal fade" id="tunaModal" tabindex="-1" aria-labelledby="tunaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tunaModalLabel">Tuna Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Oriental Modal -->
+<div class="modal fade" id="orientalModal" tabindex="-1" aria-labelledby="orientalModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orientalModalLabel">Oriental Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BBQ Modal -->
+<div class="modal fade" id="bbqModal" tabindex="-1" aria-labelledby="bbqModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bbqModalLabel">BBQ Chicken Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loca Modal -->
+<div class="modal fade" id="locaModal" tabindex="-1" aria-labelledby="locaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="locaModalLabel">Loca Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Macho Modal -->
+<div class="modal fade" id="machoModal" tabindex="-1" aria-labelledby="machoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="machoModalLabel">Macho Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Djathrat Modal -->
+<div class="modal fade" id="djathratModal" tabindex="-1" aria-labelledby="djathratModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="djathratModalLabel">4 Djathrat Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Patata Modal -->
+<div class="modal fade" id="patataModal" tabindex="-1" aria-labelledby="patataModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="patataModalLabel">La Patata Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong> <br>
+
+        This pizza costs <strong>3.00€-6.00€-10.00€-20.00€</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loca Macho BBQ Modal -->
+<div class="modal fade" id="locaMachoBbqModal" tabindex="-1" aria-labelledby="locaMachoBbqModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="locaMachoBbqModalLabel">La Patata Loca & Macho & BBQ Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong>. <br>
+
+        This pizza costs <strong>€10.00</strong>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stinet Modal -->
+<div class="modal fade" id="stinetModal" tabindex="-1" aria-labelledby="stinetModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="stinetModalLabel">4 Stinet Pizza Price</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                This pizza size <strong>20cm-30cm-40cm-60cm</strong>. <br>
+
+        This pizza costs <strong>€9.75</strong>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
         	</div>
         </div>
     	</div>
@@ -374,7 +796,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 		  <div class="col-md-7 heading-section ftco-animate text-center">
-			<h2 class="mb-4 translatable" data-key="our_services">Our Services</h2>
+			<h2 class="mb-4 translatable"  data-key="our_services">Our Services</h2>
 			<p class="translatable" data-key="our_services_desc">Our mission is to redefine pizza enjoyment through consistency, innovation, and a commitment to flavor excellence, ensuring every bite is distinctive and delightful. Join us on a thrilling journey of culinary adventure.</p>
 		  </div>
 		</div>
@@ -499,56 +921,58 @@
     </section>
 
     
-		 <title>
-		  Explore Exquisite Flavors
-		 </title>
-		 <script src="https://cdn.tailwindcss.com">
-		 </script>
-		</head>
-		<body class="bg-white ">
-		 <div class="container mx-auto px-4 py-8">
-		  <div class="text-center">
-		   <h2 class="text-sm text-orange-600 uppercase">
-			Proper Pizza
-		   </h2>
-		   <h1 class="text-3xl font-bold mt-2">
-			Explore Exquisite Flavors
-		   </h1>
-		  </div>
-		  <div class="flex flex-col md:flex-row items-center justify-center mt-8">
-		   <div class="w-full md:w-1/3 text-center md:text-left">
-			<h3 class="text-xl font-bold">
-				Ingredients
-			</h3>
-			<ul class="mt-4 space-y-4">
-			 <li class="border-t border-gray-300 pt-4">
-			  Rice Flour
-			 </li>
-			 <li class="border-t border-gray-300 pt-4">
-			  Tapioca Flour
-			 </li>
-			</ul>
-		   </div>
-		   <div class="w-full md:w-1/3 flex justify-center my-8 md:my-0">
-			<img alt="A delicious pizza with various toppings" class="rounded-full rotate-pizza" height="400" src="images/Pershuto-1024x1024.png" width="400"/>
-		
-		</div>
-		   <div class="w-full md:w-1/3 text-center md:text-right">
-			<h3 class="text-xl font-bold">
-			 Benefits
-			</h3>
-			<ul class="mt-4 space-y-4">
-			 <li class="border-t border-gray-300 pt-4">
-			  Improved Digestion
-			 </li>
-			 <li class="border-t border-gray-300 pt-4">
-			  Reduced Bloating
-			 </li>
-			</ul>
-		   </div>
-		  </div>
-		 </div>
-		</body>
+  <title>Explore Exquisite Flavors</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <div class="container mx-auto px-4 py-8">
+    <div class="text-center">
+      <h2 class="text-sm uppercase mb-2" style="color: #ff6b3d; letter-spacing: 0.1em;">
+        Proper Pizza
+      </h2>
+      <h1 class="text-3xl font-bold mt-2" style="color: #333;">
+        Explore Exquisite Flavors
+      </h1>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-center mt-8">
+      <div class="w-full md:w-1/3 text-center md:text-left px-4">
+        <h3 class="text-xl font-bold mb-4" style="color: #333;">
+          Ingredients
+        </h3>
+        <ul class="mt-4 space-y-4">
+          <li class="border-t border-gray-200 pt-4" style="color: #555;">
+            Rice Flour
+          </li>
+          <li class="border-t border-gray-200 pt-4" style="color: #555;">
+            Tapioca Flour
+          </li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/3 flex justify-center my-8 md:my-0">
+        <img alt="A delicious pizza with various toppings" 
+             class="rounded-full rotate-pizza" 
+             height="400" 
+             src="images/Pershuto-1024x1024.png" 
+             width="400"
+             style="border: 4px solid #ff6b3d; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+      </div>
+      <div class="w-full md:w-1/3 text-center md:text-right px-4">
+        <h3 class="text-xl font-bold mb-4" style="color: #333;">
+          Benefits
+        </h3>
+        <ul class="mt-4 space-y-4">
+          <li class="border-t border-gray-200 pt-4" style="color: #555;">
+            Improved Digestion
+          </li>
+          <li class="border-t border-gray-200 pt-4" style="color: #555;">
+            Reduced Bloating
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
 	   
    
 		
@@ -633,7 +1057,7 @@
   </section>
 
   <!-- Continue with other sections adding translation support -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
